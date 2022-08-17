@@ -1,4 +1,5 @@
 set wildmenu
+set termguicolors
 set nocompatible
 set bg=dark
 filetype on
@@ -47,9 +48,10 @@ Plug 'rhysd/vim-clang-format'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
-colorscheme everforest 
+colorscheme ayu 
 
 nmap <space>f <Cmd>FZF<CR>
 
@@ -69,3 +71,4 @@ augroup JavaFormat
 autocmd!
   autocmd FileType java Autoformat
 augroup end
+
