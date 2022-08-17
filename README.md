@@ -4,7 +4,7 @@
 
 ### Do you want to use this config?
 - Download vimplug from https://github.com/junegunn/vim-plug
-- Copy the .vimrc in your home directory [replace it with the old vimrc]
+- Copy the .vimrc in your home directory [replace the old .vimrc]
 - Start vim and run `PlugInstall`
 - After installation, restart vim 
 - It will look like this 👇
