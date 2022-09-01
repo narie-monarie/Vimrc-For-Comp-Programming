@@ -36,6 +36,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sainnhe/vim-color-forest-night'
 Plug 'valloric/youcompleteme'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'tribela/vim-transparent'
 Plug 'wakatime/vim-wakatime'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
@@ -49,12 +50,23 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'ayu-theme/ayu-vim'
+Plug 'omnisharp/omnisharp-vim'
+Plug 'joshdick/onedark.vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/0.x'
+  \ }
+Plug 'nlknguyen/papercolor-theme'
+Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
 
-colorscheme ayu 
-
+colorscheme tokyonight
 nmap <space>f <Cmd>FZF<CR>
 
+let g:TransparentEnable=1
 augroup Templates
 autocmd!
   autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
@@ -72,3 +84,12 @@ autocmd!
   autocmd FileType java Autoformat
 augroup end
 
+let g:OmniSharp_highlighting = 1
+" when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 0
+autocmd BufWrite,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
