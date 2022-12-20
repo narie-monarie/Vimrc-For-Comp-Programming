@@ -3,7 +3,11 @@
 # Vimrc For Competitive Programming
 
 ### Do you want to use this config?
-- Download vimplug from https://github.com/junegunn/vim-plug
+- Enter the Command bellow in your terminal
+```bash
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    ```
 - Copy the .vimrc in your home directory [replace the old .vimrc]
 - Start vim and run `PlugInstall`
 - After installation, restart vim 
